@@ -129,3 +129,9 @@ dt {
     color:green;
     font-style:italic;
 }
+#taxonomy {
+	text-align:center  }
+.img-center { 
+	float:left;
+	margin-right: 15px;
+}
