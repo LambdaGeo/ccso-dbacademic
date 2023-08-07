@@ -82,14 +82,14 @@ ccso_dbacademic:aboutMe a owl:DatatypeProperty ;
 
 
 ccso_dbacademic:ResearchGroup a owl:Class ;
-     rdfs:subClassOf foaf:Group ;
+     rdfs:subClassOf schema:Organization ;
     rdfs:label "Research Group" ;
     rdfs:comment "A group of researchers working together on a common topic or research project." .
 
 
 # Declaração da classe ResearchProject
 ccso:ResearchProject a owl:Class ;
-    rdfs:subClassOf foaf:Project ;
+    rdfs:subClassOf schema:Project ;
     rdfs:label "Research Project" ;
     rdfs:comment "A research project or study conducted by a group of researchers." .
 

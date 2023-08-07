@@ -274,6 +274,17 @@ code{
     <script id="schema.org" type="application/ld+json">
 [
   {
+    "@id": "http://www.w3.org/2002/07/owl#Ontology",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "A extension from CCSO"
+      }
+    ]
+  },
+  {
     "@id": "https://purl.org/linked-data/ccso-dbacademic#",
     "@type": [
       "https://schema.org/DefinedTermSet"
@@ -287,17 +298,6 @@ code{
       {
         "@language": "en",
         "@value": "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2002/07/owl#Ontology",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "A extension from CCSO"
       }
     ]
   }
@@ -361,7 +361,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://xmlns.com/foaf/0.1/Group">foaf:Group</a>
+                <a href="http://schema.org/Organization">schema1:Organization</a>
               </td>
             </tr>
             <tr>
@@ -399,7 +399,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
+                <a href="http://schema.org/Project">schema1:Project</a>
               </td>
             </tr>
             <tr>
