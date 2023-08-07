@@ -274,17 +274,6 @@ code{
     <script id="schema.org" type="application/ld+json">
 [
   {
-    "@id": "http://www.w3.org/2002/07/owl#Ontology",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "A extension from CCSO"
-      }
-    ]
-  },
-  {
     "@id": "https://purl.org/linked-data/ccso-dbacademic#",
     "@type": [
       "https://schema.org/DefinedTermSet"
@@ -298,6 +287,17 @@ code{
       {
         "@language": "en",
         "@value": "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Ontology",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "A extension from CCSO"
       }
     ]
   }
@@ -339,6 +339,27 @@ code{
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="ResearchOrganization">
+          <h3>Research Organization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://purl.org/linked-data/ccso-dbacademic#ResearchOrganization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://schema.org/Organization">schema1:Organization</a>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="ResearchGroup">
           <h3>Research Group
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -361,18 +382,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://schema.org/Organization">schema1:Organization</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasLeader">ccso_dbacademic:hasLeader</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <a href="http://schema.org/ResearchOrganization">schema1:ResearchOrganization</a>
               </td>
             </tr>
           </table>
@@ -399,18 +409,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://schema.org/Project">schema1:Project</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasProjectCoordinator">ccso_dbacademic:hasProjectCoordinator</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <a href="http://schema.org/ResearchOrganization">schema1:ResearchOrganization</a>
               </td>
             </tr>
           </table>
@@ -418,36 +417,7 @@ code{
       </div>
       <div class="section" id="objectproperties">
         <h2>Object Properties</h2>
-        <div class="property entity" id="hascoordinator">
-          <h3>has coordinator
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://purl.org/linked-data/ccso-dbacademic#hasProgramCoordinator</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <a href="https://w3id.org/ccso/ccso#ProgramOfStudy">ccso:ProgramOfStudy</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="https://w3id.org/ccso/ccso#Employee">ccso:Employee</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasLeader">
+        <div class="property entity" id="hasleader">
           <h3>has leader
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -463,10 +433,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <span>
-                  <a href="#ResearchGroup">ccso_dbacademic:ResearchGroup</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="http://schema.org/Organization">schema1:Organization</a>
               </td>
             </tr>
             <tr>
@@ -474,68 +441,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="https://w3id.org/ccso/ccso#AcademicStaff">ccso:AcademicStaff</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasProjectCoordinator">
-          <h3>has project coordinator
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://purl.org/linked-data/ccso-dbacademic#hasProjectCoordinator</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ccso/ccso#ResearchProject">ccso:ResearchProject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="https://w3id.org/ccso/ccso#Person">ccso:Person</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasheadofdepartment">
-          <h3>has head of department
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://purl.org/linked-data/ccso-dbacademic#hasHeadOfDepartment</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <a href="https://w3id.org/ccso/ccso#Department">ccso:Department</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="https://w3id.org/ccso/ccso#Person">ccso:Person</a>
+                <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a>
               </td>
             </tr>
           </table>
@@ -571,6 +477,35 @@ code{
               </th>
               <td>
                 <a href="http://schema.org/EducationalOrganization">schema1:EducationalOrganization</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasKnowledgeArea">
+          <h3>has knowledge area
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://purl.org/linked-data/ccso-dbacademic#hasKnowledgeArea</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://w3id.org/ccso/ccso#ResearchOrganization">ccso:ResearchOrganization</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="https://w3id.org/ccso/ccso#KnowledgeArea">ccso:KnowledgeArea</a>
               </td>
             </tr>
           </table>
@@ -613,6 +548,76 @@ code{
             </tr>
           </table>
         </div>
+        <div class="property entity" id="startDate">
+          <h3>startDate
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://purl.org/linked-data/ccso-dbacademic#startDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates the start date of the research project.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="#ResearchProject1">ccso_acad:ResearchProject</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="endDate">
+          <h3>endDate
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://purl.org/linked-data/ccso-dbacademic#endDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates the end date of the research project.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="#ResearchProject1">ccso_acad:ResearchProject</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div id="namespaces">
         <h2>Namespaces</h2>
@@ -621,7 +626,7 @@ code{
           <dd>
             <code>https://w3id.org/ccso/ccso#</code>
           </dd>
-          <dt id="ccso_dbacademic">ccso_dbacademic</dt>
+          <dt id="ccso_acad">ccso_acad</dt>
           <dd>
             <code>https://purl.org/linked-data/ccso-dbacademic#</code>
           </dd>
@@ -648,6 +653,10 @@ code{
           <dt id="schema1">schema1</dt>
           <dd>
             <code>http://schema.org/</code>
+          </dd>
+          <dt id="xsd">xsd</dt>
+          <dd>
+            <code>http://www.w3.org/2001/XMLSchema#</code>
           </dd>
         </dl>
       </div>
@@ -699,6 +708,9 @@ code{
           </h4>
           <ul class="second">
             <li>
+              <a href="#ResearchOrganization">Research Organization</a>
+            </li>
+            <li>
               <a href="#ResearchGroup">Research Group</a>
             </li>
             <li>
@@ -712,19 +724,13 @@ code{
           </h4>
           <ul class="second">
             <li>
-              <a href="#hascoordinator">has coordinator</a>
-            </li>
-            <li>
-              <a href="#hasLeader">has leader</a>
-            </li>
-            <li>
-              <a href="#hasProjectCoordinator">has project coordinator</a>
-            </li>
-            <li>
-              <a href="#hasheadofdepartment">has head of department</a>
+              <a href="#hasleader">has leader</a>
             </li>
             <li>
               <a href="#providedBy">providedBy</a>
+            </li>
+            <li>
+              <a href="#hasKnowledgeArea">has knowledge area</a>
             </li>
           </ul>
         </li>
@@ -735,6 +741,12 @@ code{
           <ul class="second">
             <li>
               <a href="#aboutMe">aboutMe</a>
+            </li>
+            <li>
+              <a href="#startDate">startDate</a>
+            </li>
+            <li>
+              <a href="#endDate">endDate</a>
             </li>
           </ul>
         </li>
@@ -747,7 +759,7 @@ code{
               <a href="#ccso">ccso</a>
             </li>
             <li>
-              <a href="#ccso_dbacademic">ccso_dbacademic</a>
+              <a href="#ccso_acad">ccso_acad</a>
             </li>
             <li>
               <a href="#dcterms">dcterms</a>
@@ -766,6 +778,9 @@ code{
             </li>
             <li>
               <a href="#schema1">schema1</a>
+            </li>
+            <li>
+              <a href="#xsd">xsd</a>
             </li>
           </ul>
         </li>

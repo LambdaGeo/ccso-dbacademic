@@ -1,4 +1,4 @@
-@prefix ccso_dbacademic: <https://purl.org/linked-data/ccso-dbacademic#> .
+@prefix ccso_acad: <https://purl.org/linked-data/ccso-dbacademic#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -29,49 +29,53 @@
 #################################################################
 
 ###  https://w3id.org/ccso/ccso#hasProgramCoordinator
-ccso_dbacademic:hasProgramCoordinator rdf:type owl:ObjectProperty ;
-                                            rdfs:domain ccso:ProgramOfStudy ;
-                                            rdfs:range ccso:Employee ;
-                                            rdfs:label "has coordinator" .
 
-ccso_dbacademic:hasLeader a owl:ObjectProperty ;
+ccso_acad:hasLeader a owl:ObjectProperty ;
     rdfs:label "has leader" ;
-    rdfs:domain ccso_dbacademic:ResearchGroup ;
-    rdfs:range ccso:AcademicStaff .
+    rdfs:domain schema:Organization ;
+    rdfs:range foaf:Person.
+    
 
 
-# Declaração da propriedade de coordenação do projeto
-ccso_dbacademic:hasProjectCoordinator a owl:ObjectProperty;
-    rdfs:label "has project coordinator" ;
-    rdfs:domain ccso:ResearchProject ;
-    rdfs:range ccso:Person .
-
-
-# Declaração da propriedade hasHeadOfDepartment
-ccso_dbacademic:hasHeadOfDepartment a owl:ObjectProperty ;
-    rdfs:label "has head of department" ;
-    rdfs:domain ccso:Department ;
-    rdfs:range ccso:Person .
-
-
-ccso_dbacademic:providedBy a owl:ObjectProperty ;
+ccso_acad:providedBy a owl:ObjectProperty ;
     rdfs:label "providedBy" ;
     rdfs:domain ccso:ProgramofStudy ;
     rdfs:range schema:EducationalOrganization ;
     rdfs:comment "A Study Program is provided by an Educational Organization.".
 
+ccso_acad:hasKnowledgeArea a owl:ObjectProperty ;
+    rdfs:domain ccso:ResearchOrganization ;
+    rdfs:range ccso:KnowledgeArea .
 
+
+
+    
 
 
 #################################################################
 #    Data Properties
 #################################################################
 
-ccso_dbacademic:aboutMe a owl:DatatypeProperty ;
+ccso_acad:aboutMe a owl:DatatypeProperty ;
     rdfs:label "aboutMe" ;
     rdfs:domain foaf:Person ;
     rdfs:range rdfs:Literal ;
     rdfs:comment "A property to represent information about a person." .
+
+
+# Declaração da propriedade startDate
+ccso_acad:startDate a owl:DatatypeProperty ;
+    rdfs:label "startDate" ;
+    rdfs:domain ccso_acad:ResearchProject ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Indicates the start date of the research project." .
+
+# Declaração da propriedade endDate
+ccso_acad:endDate a owl:DatatypeProperty ;
+    rdfs:label "endDate" ;
+    rdfs:domain ccso_acad:ResearchProject ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Indicates the end date of the research project." .
 
 
 
@@ -79,17 +83,18 @@ ccso_dbacademic:aboutMe a owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+ccso_acad:ResearchOrganization a owl:Class ;
+    rdfs:subClassOf schema:Organization.
 
-
-ccso_dbacademic:ResearchGroup a owl:Class ;
-     rdfs:subClassOf schema:Organization ;
+ccso_acad:ResearchGroup a owl:Class ;
+    rdfs:subClassOf schema:ResearchOrganization ;
     rdfs:label "Research Group" ;
     rdfs:comment "A group of researchers working together on a common topic or research project." .
 
 
 # Declaração da classe ResearchProject
 ccso:ResearchProject a owl:Class ;
-    rdfs:subClassOf schema:Project ;
+    rdfs:subClassOf schema:ResearchOrganization ;
     rdfs:label "Research Project" ;
     rdfs:comment "A research project or study conducted by a group of researchers." .
 
