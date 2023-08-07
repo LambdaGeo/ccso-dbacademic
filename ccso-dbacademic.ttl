@@ -5,8 +5,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ccso: <https://w3id.org/ccso/ccso#> .
-@base <http://www.w3.org/2002/07/owl#Ontology> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/>.
+
+@base <http://www.w3.org/2002/07/owl#Ontology> .
+
 
 <http://www.w3.org/2002/07/owl#Ontology> rdf:type <http://www.w3.org/2002/07/owl#Ontology> ;
                                           owl:imports <https://w3id.org/ccso/ccso> ;
@@ -25,8 +28,8 @@
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/ccso/ccso#hasCoordinator
-ccso_dbacademic:hasCoordinator rdf:type owl:ObjectProperty ;
+###  https://w3id.org/ccso/ccso#hasProgramCoordinator
+ccso_dbacademic:hasProgramCoordinator rdf:type owl:ObjectProperty ;
                                             rdfs:domain ccso:ProgramOfStudy ;
                                             rdfs:range ccso:Employee ;
                                             rdfs:label "has coordinator" .
@@ -38,17 +41,38 @@ ccso_dbacademic:hasLeader a owl:ObjectProperty ;
 
 
 # Declaração da propriedade de coordenação do projeto
-ccso_dbacademic:hasProjectCoordinator a rdf:Property ;
+ccso_dbacademic:hasProjectCoordinator a owl:ObjectProperty;
     rdfs:label "has project coordinator" ;
     rdfs:domain ccso:ResearchProject ;
     rdfs:range ccso:Person .
 
 
 # Declaração da propriedade hasHeadOfDepartment
-ccso_dbacademic:hasHeadOfDepartment a rdf:Property ;
+ccso_dbacademic:hasHeadOfDepartment a owl:ObjectProperty ;
     rdfs:label "has head of department" ;
     rdfs:domain ccso:Department ;
     rdfs:range ccso:Person .
+
+
+ccso_dbacademic:providedBy a owl:ObjectProperty ;
+    rdfs:label "providedBy" ;
+    rdfs:domain ccso:ProgramofStudy ;
+    rdfs:range schema:EducationalOrganization ;
+    rdfs:comment "A Study Program is provided by an Educational Organization.".
+
+
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+ccso_dbacademic:aboutMe a owl:DatatypeProperty ;
+    rdfs:label "aboutMe" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "A property to represent information about a person." .
+
 
 
 #################################################################
