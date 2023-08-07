@@ -12,16 +12,16 @@
 
 
 <http://www.w3.org/2002/07/owl#Ontology> rdf:type <http://www.w3.org/2002/07/owl#Ontology> ;
-                                          owl:imports <https://w3id.org/ccso/ccso> ;
-                                          rdfs:comment "A extension from CCSO" .
-
+                                          owl:imports <https://w3id.org/ccso/ccso> .
+                            
 
 
 @prefix dcterms: <http://purl.org/dc/terms/>.
 <https://purl.org/linked-data/ccso-dbacademic#> rdf:type owl:Ontology ;
                             dcterms:title "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"@en;
-                                        rdf:label "CCSO Extension";
-                                          rdfs:comment "...." .
+                            rdf:label "CCSO Extension";
+                            #rdfs:comment "...." 
+                            .
                             
 
 #################################################################
@@ -32,9 +32,21 @@
 
 ccso_acad:hasLeader a owl:ObjectProperty ;
     rdfs:label "has leader" ;
-    rdfs:domain schema:Organization ;
+    rdfs:domain schema:ResearchOrganization ;
     rdfs:range foaf:Person.
-    
+
+
+
+ccso_acad:hasHead a owl:ObjectProperty ;
+    rdfs:label "hasHead" ;
+    rdfs:domain ccso:Department ;
+    rdfs:range ccso:Employee.
+
+ccso_acad:hasCoordinator a owl:ObjectProperty ;
+    rdfs:label "has Coordinator" ;
+    rdfs:domain ccso:ProgramofStudy ;
+    rdfs:range foaf:AcademicStaff.
+
 
 
 ccso_acad:providedBy a owl:ObjectProperty ;
