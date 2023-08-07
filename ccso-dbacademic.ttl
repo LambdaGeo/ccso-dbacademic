@@ -12,7 +12,7 @@
                                           rdfs:comment "A extension from CCSO" .
 
 @prefix dcterms: <http://purl.org/dc/terms/>.
-<http://www.purl.org/linked-data/dbcells/attribute> rdf:type owl:Ontology ;
+<https://purl.org/linked-data/ccso-dbacademic#> rdf:type owl:Ontology ;
                             dcterms:title "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"@en;
                                         rdf:label "CCSO Extension";
                                           rdfs:comment "...." .
