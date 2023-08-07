@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ccso: <https://w3id.org/ccso/ccso> .
+@prefix ccso: <https://w3id.org/ccso/ccso#> .
 @base <http://www.w3.org/2002/07/owl#Ontology> .
 
 <http://www.w3.org/2002/07/owl#Ontology> rdf:type <http://www.w3.org/2002/07/owl#Ontology> ;
@@ -24,8 +24,8 @@
 
 ###  https://w3id.org/ccso/ccso#hasCoordinator
 ccso_dbacademic:hasCoordinator rdf:type owl:ObjectProperty ;
-                                            rdfs:domain <https://w3id.org/ccso/ccso#ProgramOfStudy> ;
-                                            rdfs:range <https://w3id.org/ccso/ccso#Employee> ;
+                                            rdfs:domain ccso:ProgramOfStudy ;
+                                            rdfs:range ccso:Employee ;
                                             rdfs:label "has coordinator" .
 
 ccso_dbacademic:hasLeader a owl:ObjectProperty ;
