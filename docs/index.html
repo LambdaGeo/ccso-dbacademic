@@ -337,6 +337,27 @@ code{
                 <a href="http://schema.org/Organization">schema1:Organization</a>
               </td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#ResearchGroup">ccsoacad:ResearchGroup</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/ccso/ccso#ResearchProject">ccso:ResearchProject</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="property entity" id="ResearchGroup">
@@ -361,7 +382,10 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://schema.org/ResearchOrganization">schema1:ResearchOrganization</a>
+                <span>
+                  <a href="#ResearchOrganization">ccsoacad:ResearchOrganization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -388,7 +412,10 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <a href="http://schema.org/ResearchOrganization">schema1:ResearchOrganization</a>
+                <span>
+                  <a href="#ResearchOrganization">ccsoacad:ResearchOrganization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -441,7 +468,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="https://w3id.org/ccso/ccso#Department">ccso:Department</a>
+                <a href="http://schema.org/EducationalOrganization">schema1:EducationalOrganization</a>
               </td>
             </tr>
             <tr>
@@ -478,7 +505,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://xmlns.com/foaf/0.1/AcademicStaff">foaf:AcademicStaff</a>
+                <a href="https://w3id.org/ccso/ccso#AcademicStaff">ccso:AcademicStaff</a>
               </td>
             </tr>
           </table>
@@ -607,7 +634,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#ResearchProject1">ccso_acad:ResearchProject</a>
+                <a href="#ResearchProject1">ccsoacad:ResearchProject</a>
               </td>
             </tr>
             <tr>
@@ -642,7 +669,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#ResearchProject1">ccso_acad:ResearchProject</a>
+                <a href="#ResearchProject1">ccsoacad:ResearchProject</a>
               </td>
             </tr>
             <tr>
@@ -663,7 +690,7 @@ code{
           <dd>
             <code>https://w3id.org/ccso/ccso#</code>
           </dd>
-          <dt id="ccso_acad">ccso_acad</dt>
+          <dt id="ccsoacad">ccsoacad</dt>
           <dd>
             <code>https://purl.org/linked-data/ccso-dbacademic#</code>
           </dd>
@@ -802,7 +829,7 @@ code{
               <a href="#ccso">ccso</a>
             </li>
             <li>
-              <a href="#ccso_acad">ccso_acad</a>
+              <a href="#ccsoacad">ccsoacad</a>
             </li>
             <li>
               <a href="#dcterms">dcterms</a>
