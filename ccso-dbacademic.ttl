@@ -9,19 +9,28 @@
 @prefix schema: <http://schema.org/>.
 
 @base <http://www.w3.org/2002/07/owl#Ontology> .
+@prefix dct: <http://purl.org/dc/terms/>.
 
 
 <http://www.w3.org/2002/07/owl#Ontology> rdf:type <http://www.w3.org/2002/07/owl#Ontology> ;
                                           owl:imports <https://w3id.org/ccso/ccso> .
                             
 
+                            
 
-@prefix dcterms: <http://purl.org/dc/terms/>.
+
+
 <https://purl.org/linked-data/ccso-dbacademic#> rdf:type owl:Ontology ;
-                            dcterms:title "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"@en;
-                            rdf:label "CCSO Extension";
-                            #rdfs:comment "...." 
+                            dct:title "A extension of Curriculum Course Syllabus Ontology to DBAcademic"@en;
+                            dct:creator  "Sérgio Souza Costa";     # As a string to enable documentation tool to work
+                            dct:contributor "André Moura Lima" ;
+                            dct:date     "2023-08-15"^^xsd:date;
+                            dct:modified "2023-08-15"^^xsd:date;
+                            owl:versionInfo "0.1";
+                            # For documentation tools
+                            dct:description "Esta é uma extensao para a ontologia Curriculum Course Syllabus Ontology (https://w3id.org/ccso/ccso) para suportar o projeto DBAcademic."@pt;
                             .
+
                             
 
 #################################################################

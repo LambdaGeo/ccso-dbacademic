@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic</title>
+    <title>A extension of Curriculum Course Syllabus Ontology to DBAcademic</title>
     <style>
         #pylode {
             position: fixed;
@@ -274,21 +274,43 @@ code{
     <script id="schema.org" type="application/ld+json">
 [
   {
-    "@id": "http://www.w3.org/2002/07/owl#Ontology",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ]
-  },
-  {
     "@id": "https://purl.org/linked-data/ccso-dbacademic#",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
+    "https://schema.org/contributor": [
+      {
+        "@value": "André Moura Lima"
+      }
+    ],
+    "https://schema.org/creator": [
+      {
+        "@value": "Sérgio Souza Costa"
+      }
+    ],
+    "https://schema.org/dateModified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-08-15"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@language": "pt",
+        "@value": "Esta é uma extensao para a ontologia Curriculum Course Syllabus Ontology (https://w3id.org/ccso/ccso) para suportar o projeto DBAcademic."
+      }
+    ],
     "https://schema.org/name": [
       {
         "@language": "en",
-        "@value": "A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic"
+        "@value": "A extension of Curriculum Course Syllabus Ontology to DBAcademic"
       }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Ontology",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
     ]
   }
 ]
@@ -297,7 +319,14 @@ code{
   <body>
     <div id="content">
       <div class="section" id="metadata">
-        <h1>A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic</h1>
+        <h1>A extension of Curriculum Course Syllabus Ontology to DBAcademic</h1>
+
+        <h2>Taxonomy of the ontology</h2>
+        <div id="taxonomy">
+          <div class="img-center"><a href="img/relations.png"><img src="img/relations.png" alt="Classes, class hierarchy and their relations of CCSO" width="500" height="296" border="0"></a></div>
+         
+        </div>
+
         <h2>Metadata</h2>
         <dl>
           <div>
@@ -312,7 +341,37 @@ code{
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
             </dt>
-            <dd><p>A extension of Curriculum Course Syllabus Ontology (CCSO) to DBAcademic</p></dd>
+            <dd><p>A extension of Curriculum Course Syllabus Ontology to DBAcademic</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/creator" title="An entity responsible for making the resource. Defined in DCMI Metadata Terms">Creator</a>
+            </dt>
+            <dd><p>Sérgio Souza Costa</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/contributor" title="An entity responsible for making contributions to the resource. Defined in DCMI Metadata Terms">Contributor</a>
+            </dt>
+            <dd><p>André Moura Lima</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/modified" title="Date on which the resource was changed. Defined in DCMI Metadata Terms">Date Modified</a>
+            </dt>
+            <dd><p>2023-08-15</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
+            </dt>
+            <dd><p>0.1</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+            </dt>
+            <dd><p>Esta é uma extensao para a ontologia Curriculum Course Syllabus Ontology (https://w3id.org/ccso/ccso) para suportar o projeto DBAcademic.</p></dd>
           </div>
         </dl>
       </div>
@@ -694,7 +753,7 @@ code{
           <dd>
             <code>https://purl.org/linked-data/ccso-dbacademic#</code>
           </dd>
-          <dt id="dcterms">dcterms</dt>
+          <dt id="dct">dct</dt>
           <dd>
             <code>http://purl.org/dc/terms/</code>
           </dd>
@@ -705,6 +764,10 @@ code{
           <dt id="owl">owl</dt>
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="prov">prov</dt>
+          <dd>
+            <code>http://www.w3.org/ns/prov#</code>
           </dd>
           <dt id="rdf">rdf</dt>
           <dd>
@@ -832,13 +895,16 @@ code{
               <a href="#ccsoacad">ccsoacad</a>
             </li>
             <li>
-              <a href="#dcterms">dcterms</a>
+              <a href="#dct">dct</a>
             </li>
             <li>
               <a href="#foaf">foaf</a>
             </li>
             <li>
               <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#prov">prov</a>
             </li>
             <li>
               <a href="#rdf">rdf</a>
