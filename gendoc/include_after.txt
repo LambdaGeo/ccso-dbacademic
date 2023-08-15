@@ -1,6 +1,12 @@
 
         <h2>Taxonomy of the ontology</h2>
+        <H3>DBAcademic Relations</H3>
         <div id="taxonomy">
           <div class="img-center"><a href="img/relations.png"><img src="img/relations.png" alt="Classes, class hierarchy and their relations of CCSO" width="500" height="296" border="0"></a></div>
          
         </div>
+        <H3>CCSO Properties</H3>
+
+        <p> The Research Organization class, and its subclasses, share the same properties as Schema:Organization. </p>
+
+        <div class="img-center"> <a href="img/CCSO-Taxonomy_wProperties.png"><img src="img/CCSO-Taxonomy_wProperties.png" alt="Classes, with properties, class hierarchy, and their relations of CCSO" width="500" height="439" border="0"></a></div>
