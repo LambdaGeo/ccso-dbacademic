@@ -69,6 +69,13 @@ ccsoacad:hasKnowledgeArea a owl:ObjectProperty ;
     rdfs:range ccso:KnowledgeArea .
 
 
+ccsoacad:memberOf a owl:ObjectProperty ;
+    rdfs:label "providedBy" ;
+    rdfs:domain ccso:Professor ;
+    rdfs:range schema:EducationalOrganization ;
+    rdfs:comment "A Professor is member of an Educational Organization, Deparment, School or University.".
+
+
 
     
 
